@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prashnmanjusha Love Edition ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body { background-color: var(--bg-pink); font-family: 'Arial', sans-serif; margin: 0; height: 100vh; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+        /* Background image as an <img> keeps it from being upscaled and blurred */
+        #bgImage { position: fixed; left: 50%; top: 50%; transform: translate(-50%,-50%); z-index: -1; pointer-events: none; width: auto; height: auto; max-width: 90vw; max-height: 90vh; filter: grayscale(40%) saturate(60%); }
+        /* For older browsers and very small screens ensure positioning remains usable */
+        @media (max-width: 420px) {
+            #bgImage { max-width: 95vw; max-height: 60vh; top: 40%; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- background image kept as an <img> to avoid upscaling blur -->
+    <img id="bgImage" src="download (1).jpg" alt="background">
+
+    <div id="welcomeScreen" class="card">
+        <h1>Yaa Saheb !! Lets see how well do you know me??</h1>
+        <p>Welcome to <b>Prashnmanjusha, Love !!</b> 💖</p>
+        <button id="startBtn">Start My Love Test</button>
+    </div>
+
+    <div id="quizScreen" class="card hidden">
+        <div id="feedback" style="height: 25px;"></div>
+        <h2 id="questionText">Question goes here?</h2>
+        <div class="options" id="optionsContainer"></div>
+        <p class="score-footer">Score: <span id="currentScore">0</span></p>
+    </div>
+
+    <div id="reportScreen" class="card hidden">
+        <h2>💌 Your Love Report</h2>
+        <div class="report-card">
+            <h1 id="finalMarks">0/7</h1>
+            <p id="evaluationText"></p>
+        </div>
+        <p style="margin-top:20px;">I know you still love me like anything !!! Lets see whats ahead 😍✨</p>
+        <button id="seeAheadBtn">Click to see whats ahead...</button>
+    </div>
+
+    <div id="valentineScreen" class="card hidden">
+        <div class="container" id="mainBox">
+            <h2 id="question">Will you Marry Me, Adi Saheb? ❤️</h2>
+            <div class="btn-container" id="btnGroup">
+                <button id="yesBtn">Yes!</button>
+                <button id="noBtn">Obviously</button>
+            </div>
+            <div id="finalMessage" class="hidden">
+                I love you so much Adi Saheb! 💋 I Miss you Khupppppppppppppppppppp❤️ Uuuuummmmaaaaaahhhhhhhhh<br>
+                <img src="How to Kiss a Man_ Building Anticipation.jpg" alt="How to Kiss a Man" style="margin-top:12px;max-width:100%;width:240px;border-radius:8px;box-shadow:0 8px 18px rgba(0,0,0,0.12);">
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

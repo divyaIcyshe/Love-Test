@@ -1,0 +1,102 @@
+:root {
+    --main-pink: #ff4d6d;
+    --bg-pink: #fff0f3;
+}
+
+body {
+    background-color: var(--bg-pink);
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 90%;
+    max-width: 450px;
+    z-index: 10;
+    position: relative;
+}
+
+h1, h2 { color: var(--main-pink); }
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+button {
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid var(--main-pink);
+    background: white;
+    color: var(--main-pink);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+button:hover {
+    background: var(--main-pink);
+    color: white;
+}
+
+.hidden { display: none; }
+
+/* Animations for Answers */
+.correct-pop { animation: pop 0.5s ease; color: #2ecc71; font-weight: bold; }
+.wrong-shake { animation: shake 0.5s ease; color: #e74c3c; font-weight: bold; }
+
+@keyframes pop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-8px); }
+    75% { transform: translateX(8px); }
+}
+
+/* Falling Hearts/Kisses */
+.falling {
+    position: fixed;
+    top: -50px;
+    z-index: 1;
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    to { transform: translateY(110vh); }
+}
+
+.report-card {
+    border: 3px dashed var(--main-pink);
+    padding: 20px;
+    border-radius: 15px;
+    background: #fff9fa;
+    margin: 15px 0;
+}
+
+#noBtn { position: absolute; transition: 0.2s ease; }
+
+.score-footer { margin-top: 20px; font-size: 14px; color: grey; }
+
+#finalMessage { margin-top: 15px; color: var(--main-pink); font-size: 20px; }
+
+@media (max-width: 420px) {
+    button { padding: 14px; font-size: 18px; }
+    .card { padding: 20px; }
+}
