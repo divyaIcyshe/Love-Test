@@ -13,7 +13,8 @@ const questions = [
 
 // Event Listeners
 document.getElementById('startBtn').addEventListener('click', startQuiz);
-document.getElementById('seeAheadBtn').addEventListener('click', showValentine);
+// Route the "see ahead" button to the password screen first
+document.getElementById('seeAheadBtn').addEventListener('click', showPasswordScreen);
 document.getElementById('yesBtn').addEventListener('click', celebrate);
 const noBtn = document.getElementById('noBtn');
 noBtn.addEventListener('pointerenter', moveButton);
@@ -69,9 +70,12 @@ function showReport() {
     evalText.innerText = score >= 5 ? "Wow! You are a Pro Boyfriend! 🏆" : "Huhh 😅";
 }
 
+// UPDATE THIS FUNCTION
 function showValentine() {
-    document.getElementById('reportScreen').classList.add('hidden');
-    document.getElementById('valentineScreen').classList.remove('hidden');
+    // Hide any previous screens then show the valentine screen
+    const screens = ['welcomeScreen','quizScreen','reportScreen','passwordScreen','letterScreen'];
+    screens.forEach(id => { const el = document.getElementById(id); if(el) el.classList.add('hidden'); });
+    const val = document.getElementById('valentineScreen'); if(val) val.classList.remove('hidden');
 }
 
 function moveButton() {
@@ -99,6 +103,27 @@ function celebrate() {
     }, 200);
 }
 
+// >>> ADD THESE NEW FUNCTIONS <<<
+
+function showPasswordScreen() {
+    document.getElementById('reportScreen').classList.add('hidden');
+    document.getElementById('passwordScreen').classList.remove('hidden');
+}
+
+function checkPassword() {
+    const pass = document.getElementById('passInput').value;
+    const error = document.getElementById('passError');
+    
+    // Set your password here (e.g., 1210 for Oct 12)
+    if (pass === "2828") { 
+        document.getElementById('passwordScreen').classList.add('hidden');
+        document.getElementById('letterScreen').classList.remove('hidden');
+    } else {
+        error.style.display = 'block';
+        error.classList.add('wrong-shake');
+        setTimeout(() => error.classList.remove('wrong-shake'), 500);
+    }
+}
 /* Background floating emojis (hearts & kisses) */
 (function backgroundParticles(){
     const canvas = document.createElement('canvas');

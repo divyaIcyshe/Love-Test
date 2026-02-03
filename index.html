@@ -43,6 +43,26 @@
         <button id="seeAheadBtn">Click to see whats ahead...</button>
     </div>
 
+    <div id="passwordScreen" class="card hidden">
+    <h2>🔒 A Secret for You...</h2>
+    <p>Enter our "Special Date" to unlock my heart (DDMM format):</p>
+    <input type="password" id="passInput" placeholder="Enter Password" style="padding:12px; width:80%; border:2px solid var(--main-pink); border-radius:10px; margin-top:10px; text-align:center; font-size:20px; outline:none;">
+    <div class="options">
+        <button onclick="checkPassword()">Unlock Letter</button>
+    </div>
+    <p id="passError" style="color: red; display: none; font-size: 14px; margin-top: 10px;">Incorrect! Hint: The day we first met. 😉</p>
+</div>
+
+<div id="letterScreen" class="card hidden">
+    <h2>My Love Letter 💌</h2>
+    <div class="report-card" style="max-height: 250px; overflow-y: auto; text-align: left;">
+        <p>My Dearest Adi Saheb,</p>
+        <p>I wanted to tell you that you are the most amazing person I've ever met...</p>
+        <p><i>(Write your long heartfelt message here!)</i></p>
+        <p>Yours forever, <br> [Your Name]</p>
+    </div>
+    <button onclick="showValentine()">One last thing...</button>
+</div>
     <div id="valentineScreen" class="card hidden">
         <div class="container" id="mainBox">
             <h2 id="question">Will you Marry Me, Adi Saheb? ❤️</h2>
@@ -60,3 +80,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+
