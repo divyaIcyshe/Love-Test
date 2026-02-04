@@ -2,13 +2,16 @@ let score = 0;
 let currentQ = 0;
 
 const questions = [
-    { q: "What is my favorite color?", opts: ["Pink", "Black", "Red", "Maroon"], ans: 3 },
+    { q: "Which color dress was I wearing when we first met?", opts: ["Pink", "Black", "Red", "Maroon"], ans: 3 },
     { q: "Where did we first talk?", opts: ["WhatsApp", "Instagram", "College", "Mutual Friend"], ans: 1 },
     { q: "What's my favorite snack?", opts: ["Aditya", "Pani Puri", "Chocolate", "Chips"], ans: 0 },
     { q: "Which habit of you annoys me?", opts: ["No Updates", "Late replies", "Sleeping without saying GN", "Huh"], ans: 0 },
-    { q: "What is my dream travel destination?", opts: ["Paris", "Maldives", "Switzerland", "Bali"], ans: 3 },
-    { q: "Who is my favorite Dish?", opts: ["Momos", "Chocolate Cake", "Chicken", "Fish"], ans: 3 },
-    { q: "What do i like the most to wear?", opts: ["Saree", "Jeans", "Dress", "one Piece"], ans: 0 }
+    { q: "What is my dream travel destination?", opts: ["Paris", "Maldives", "Switzerland", "Bali"], ans: 0 },
+    { q: "What is my favorite Dish?", opts: ["Momos", "Chocolate Cake", "Chicken", "Fish"], ans: 3 },
+    { q: "What do i like the most to wear?", opts: ["Saree", "Jeans", "Dress", "one Piece"], ans: 0 },
+    { q: "Who said 'I love you' first?", opts: ["Divya", "Saheb", "NOTA"], ans: 1 },
+    { q: "When I'm silent, what does it usually mean?", opts: ["I'm tired", "I'm actually mad", "deep in thought", "All of the Above"], ans: 3 },
+    { q: "Besides you, who is the one person I tell everything to ?", opts: ["Pallavi", "Yash", "Karan", "Mummy"], ans: 0 },
 ];
 
 // Event Listeners
@@ -65,7 +68,7 @@ function checkAnswer(i) {
 function showReport() {
     document.getElementById('quizScreen').classList.add('hidden');
     document.getElementById('reportScreen').classList.remove('hidden');
-    document.getElementById('finalMarks').innerText = `${score}/7`;
+    document.getElementById('finalMarks').innerText = `${score}/10`;
     const evalText = document.getElementById('evaluationText');
     evalText.innerText = score >= 5 ? "Wow! You are a Pro Boyfriend! 🏆" : "Huhh 😅";
 }
@@ -115,7 +118,7 @@ function checkPassword() {
     const error = document.getElementById('passError');
     
     // Set your password here (e.g., 1210 for Oct 12)
-    if (pass === "2828") { 
+    if (pass === "15072025") { 
         document.getElementById('passwordScreen').classList.add('hidden');
         document.getElementById('letterScreen').classList.remove('hidden');
     } else {
