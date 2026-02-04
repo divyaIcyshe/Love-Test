@@ -99,4 +99,6 @@ button:hover {
 @media (max-width: 420px) {
     button { padding: 14px; font-size: 18px; }
     .card { padding: 20px; }
+    /* Hide the final message image on small screens to avoid showing a stray img inside the modal */
+    #finalMessage img { display: none; }
 }
