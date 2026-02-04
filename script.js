@@ -5,7 +5,7 @@ const questions = [
     { q: "Which color dress was I wearing when we first met?", opts: ["Pink", "Black", "Red", "Maroon"], ans: 3 },
     { q: "Where did we first talk?", opts: ["WhatsApp", "Instagram", "College", "Mutual Friend"], ans: 1 },
     { q: "What's my favorite snack?", opts: ["Saheb", "Pani Puri", "Chocolate", "Chips"], ans: 0 },
-    { q: "Which habit of you annoys me?", opts: ["No Updates", "Late replies", "Sleeping without saying GN", "All of the Above"], ans: 0 },
+    { q: "Which habit of you annoys me?", opts: ["No Updates", "Late replies", "Sleeping without saying GN", "All of the Above"], ans: 3 },
     { q: "What is my dream travel destination?", opts: ["Paris", "Maldives", "Switzerland", "Bali"], ans: 0 },
     { q: "What is my favorite Dish?", opts: ["Momos", "Chocolate Cake", "Chicken", "Fish"], ans: 3 },
     { q: "What do i like the most to wear?", opts: ["Saree", "Jeans", "Dress", "one Piece"], ans: 0 },
